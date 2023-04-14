@@ -9,7 +9,7 @@
     
 </p>
 
-<img src="public/assets/gtImage.jpg" alt="">
+<img src="img.png" alt="">
 
 # About
 <p>
@@ -17,20 +17,11 @@
 </p>
 
 # Features
-- [x] 1
-    - [x] 2
-        - [x] 3
-    - [x] 2
-        - [x] 3
-        - [x] 3
-    - [x] 2
-        - [x] 3
-        - [x] 3
-        - [x] 3
-- [x] 1
-    - [x] 2
-        - [x] 3
-        - [x] 3
+- [x] LINQ
+    
+- [x] CRUD
+   
+- [x] SQL
     
 # Technologies
 - C#
