@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Videoclube" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PE34IVS\MSSQLSERVER02;Initial Catalog=Videoclube;Integrated Security=True" SettingsObjectName="LinqBD.Properties.Settings" SettingsPropertyName="VideoclubeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categorias" Member="Categorias">
+    <Type Name="Categoria">
+      <Column Name="Sigla" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Categoria" Member="Categoria1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Categoria_Filme" Member="Filmes" ThisKey="Sigla" OtherKey="Categoria" Type="Filme" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Filmes" Member="Filmes">
+    <Type Name="Filme">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Categoria_Filme" Member="Categoria1" ThisKey="Categoria" OtherKey="Sigla" Type="Categoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
